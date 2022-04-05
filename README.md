@@ -1,9 +1,9 @@
-*PTest*
+# PTest
 PTest is a small program that simply sends timestamps over the NICs loopback.
 PTest can send the packets these timestamps are in through TCP or UDP.
 The point of PTest is to compare the two protocols while using `tc` to emulate certain network conditions.
 
-*TC Primer*
+# TC Primer
 [https://man7.org/linux/man-pages/man8/tc.8.html](tc) is an incredibly complex tool used to shape network traffic going through a given device. It does so on the driver level allowing you to test how well your program does in degraded network environments without having to modify the program itself. It also has decades of research behind it to make the network behaviors are realistic as possible. For example: packet loss is almost never random. It typically happens in chunks. `tc` allows you to simply specifiy 10% packet loss and it'll emulate this chunking behavior itself!
 
 In order to emulate packet loss:
@@ -15,13 +15,13 @@ In order to emulate packet loss:
 - To restore your settings:
     - `sudo tc qdisc del dev <device_name> root`
  
-*My Results*
+# My Results
 I used a VirtualBox VM running Ubuntu 18.0 LTS. The only test I've ran so far is 10% packet loss.
-**With TCP**
+## With TCP
 - Average latency: 236.782ms
 - Average latency: 210.072ms
 - Average latency: 4091.71ms
-**With UDP**
+## With UDP
 - Average latency: 0ms and missing 116 packets.
 - Average latency: 0ms and missing 114 packets.
 - Average latency: 0ms and missing 92 packets.
