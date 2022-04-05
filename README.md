@@ -27,7 +27,7 @@ I used a VirtualBox VM running Ubuntu 18.0 LTS. The only test I've ran so far is
 - Average latency: 0ms and missing 92 packets.
 
 PTest seends 1000 packets, so ~100 packets lost is expected.\
-UDP can not only detect the packet loss, but doesn't skip a beat in it's latency.
+UDP can not only detect the packet loss, but doesn't skip a beat in its latency.
 
 # How To Run
 `ptest udp` to run UDP tests and `ptest tcp` to run tcp tests.
