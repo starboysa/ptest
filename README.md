@@ -27,3 +27,9 @@ I used a VirtualBox VM running Ubuntu 18.0 LTS. The only test I've ran so far is
 - Average latency: 0ms and missing 92 packets.
 
 Out of 1000 packets sent. UDP can not only detect the packet loss, but doesn't skip a beat in it's latency.
+
+# How To Run
+`ptest udp` to run UDP tests and `ptest tcp` to run tcp tests.
+
+# Nagle's Algorithm
+Another complexity of TCP is [Nagle's Algorithm](https://en.wikipedia.org/wiki/Nagle%27s_algorithm). This algorithm batches TCP packets on the sender's side if several packets are queued in quick succession. The main purpose of the algorithm was to smooth out SSH-like technologies. In these tests Nagle's is off by default to give TCP the best chance. However, you can run `ptest tcp 1` in order to enable Nagle's. The result is about 10ms added to TCPs latency.
