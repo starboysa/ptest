@@ -1,0 +1,1 @@
+clang++ -pthread -std=c++20 main.cpp -o ptest
