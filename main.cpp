@@ -112,7 +112,7 @@ void runBenchmarkOn(int _sock) {
           std::memcpy(temp, pool + (i + 4), sizeof(pool) - (i + 4));
           std::memcpy(pool, temp, sizeof(pool));
           offset -= (i + 4);
-          break;
+          i = 0;
         }
       }
     }

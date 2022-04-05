@@ -18,9 +18,9 @@ In order to emulate packet loss:
 # My Results
 I used a VirtualBox VM running Ubuntu 18.0 LTS. The only test I've ran so far is 10% packet loss.
 ## With TCP
-- Average latency: 236.782ms
-- Average latency: 210.072ms
-- Average latency: 4091.71ms
+- Average latency: 259.367ms
+- Average latency: 205.545ms
+- Average latency: 78.757ms
 ## With UDP
 - Average latency: 0ms and missing 116 packets.
 - Average latency: 0ms and missing 114 packets.
