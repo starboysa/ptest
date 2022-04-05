@@ -4,7 +4,7 @@ PTest can send the packets these timestamps are in through TCP or UDP.
 The point of PTest is to compare the two protocols while using `tc` to emulate certain network conditions.
 
 # TC Primer
-[https://man7.org/linux/man-pages/man8/tc.8.html](tc) is an incredibly complex tool used to shape network traffic going through a given device. It does so on the driver level allowing you to test how well your program does in degraded network environments without having to modify the program itself. It also has decades of research behind it to make the network behaviors are realistic as possible. For example: packet loss is almost never random. It typically happens in chunks. `tc` allows you to simply specifiy 10% packet loss and it'll emulate this chunking behavior itself!
+[tc](https://man7.org/linux/man-pages/man8/tc.8.html) is an incredibly complex tool used to shape network traffic going through a given device. It does so on the driver level allowing you to test how well your program does in degraded network environments without having to modify the program itself. It also has decades of research behind it to make the network behaviors are realistic as possible. For example: packet loss is almost never random. It typically happens in chunks. `tc` allows you to simply specifiy 10% packet loss and it'll emulate this chunking behavior itself!
 
 In order to emulate packet loss:
 - Find the name of your NIC on linux:
